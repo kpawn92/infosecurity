@@ -1,0 +1,10 @@
+.classpdf {
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.action:hover .classpdf {
+    visibility: visible;
+    opacity: 1;
+}
