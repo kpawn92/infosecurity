@@ -176,7 +176,12 @@ active
                                         </div>
                                         <div class="form-group">
                                             <label for="so">Sistema operativo:</label>
-                                            <input type="text" class="form-control" id="so" name="so" placeholder="Entre el nombre y la versi&oacute;n">
+                                            <input type="text" class="form-control" id="so" name="so" placeholder="Entre el nombre y la versi&oacute;n" list="sistemas">
+                                            <datalist id="sistemas">
+                                                <option value="Windows"></option>
+                                                <option value="Linux"></option>
+                                                <option value="Mac"></option>
+                                            </datalist>
                                         </div>
                                     </div>
                                     <div class="col-6">
@@ -313,16 +318,20 @@ active
             "responsive": true,
             "lengthChange": false,
             "autoWidth": false,
-            "buttons": ["copy", {extend: 'pdfHtml5', orientation: 'landscape', pageSize: "LEGAL"},"excel", "print", "colvis"]
+            "buttons": ["copy", {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize: "LEGAL"
+            }, "excel", "print", "colvis"]
         }).buttons().container().appendTo('#cpus_wrapper .col-md-6:eq(0)');
 
     });
     let espanol = {
         <?= $this->include('template/langJquery') ?>,
-    };    
+    };
 </script>
 <script>
-    $().ready(function() {        
+    $().ready(function() {
         $("#btn").on("click", function() {
             $('#quickForm').validate({
                 rules: {

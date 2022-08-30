@@ -183,11 +183,19 @@ active
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="tipo">Tipo (matriz|laser):</label>
-                                            <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo de impresora">
+                                            <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo de impresora" list="imp">
+                                            <datalist id="imp">
+                                                <option value="Matriz"></option>
+                                                <option value="Laser"></option>
+                                            </datalist>
                                         </div>
                                         <div class="form-group">
                                             <label for="t_repuesto">Repuesto (cartucho|cinta):</label>
-                                            <input type="text" class="form-control" id="t_repuesto" name="t_repuesto" placeholder="Tipo de repuesto">
+                                            <input type="text" class="form-control" id="t_repuesto" name="t_repuesto" placeholder="Tipo de repuesto" list="repuesto">
+                                            <datalist id="repuesto">
+                                                <option value="Cartucho"></option>
+                                                <option value="Cinta"></option>
+                                            </datalist>
                                         </div>
                                         <div class="form-group">
                                             <label>Multifuncional:</label>
@@ -371,7 +379,10 @@ active
             "responsive": true,
             "lengthChange": true,
             "autoWidth": false,
-            "buttons": ["copy", {extend: 'pdfHtml5', orientation: 'landscape'}, "excel", "print", "colvis"]
+            "buttons": ["copy", {
+                extend: 'pdfHtml5',
+                orientation: 'landscape'
+            }, "excel", "print", "colvis"]
         }).buttons().container().appendTo('#impresoras_wrapper .col-md-6:eq(0)');
 
     });

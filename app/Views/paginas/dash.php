@@ -36,6 +36,7 @@ active
             <div class="modal-body">
                 <?php $i = 1; ?>
                 <div class="col-md-12" id="expedientePdf">
+                <h4 class="card-title">Expedientes t&eacute;cnicos</h4>
                     <table id="ordenadores" class="table table-hover text-nowrap">
                         <thead>
                             <tr>
@@ -80,7 +81,7 @@ active
             </div>
             <?php $a = 1; ?>
             <div class="modal-body">
-                <span class="badge badge-info" id="text_exp"></span>
+                <h4 class="card-title">Informes de seguridad inform&aacute;tica</h4>
                 <table id="reports" class="table table-hover text-nowrap">
                     <thead>
                         <tr>
@@ -521,16 +522,14 @@ active
             "language": espanol,
             "responsive": true,
             "lengthChange": false,
-            "autoWidth": false,
-            "buttons": ["copy", "pdf", "print", "colvis"]
+            "autoWidth": false
         }).buttons().container().appendTo('#ordenadores_wrapper .col-md-6:eq(0)');
 
         $("#reports").DataTable({
             "language": espanol,
             "responsive": true,
             "lengthChange": false,
-            "autoWidth": false,
-            "buttons": ["copy", "pdf", "print", "colvis"]
+            "autoWidth": false
         }).buttons().container().appendTo('#reports_wrapper .col-md-6:eq(0)');
 
 

@@ -184,7 +184,13 @@ active
                                         </div>
                                         <div class="form-group">
                                             <label for="tipo">Tipo (CD|DVD|CD-RW|DVD-RW):</label>
-                                            <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Entre el tipo">
+                                            <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Entre el tipo" list="tipos">
+                                            <datalist id="tipos">
+                                                <option value="CD"></option>
+                                                <option value="DVD"></option>
+                                                <option value="CD-RW"></option>
+                                                <option value="DVD-RW"></option>
+                                            </datalist>
                                         </div>
                                         <div class="form-group">
                                             <label for="marca">Marca:</label>

@@ -191,7 +191,11 @@ active
                                         </div>
                                         <div class="form-group">
                                             <label for="interfaz">Interfaz (USB|PC-2):</label>
-                                            <input type="text" class="form-control" id="interfaz" name="interfaz" placeholder="Tipo de interfaz">
+                                            <input type="text" class="form-control" id="interfaz" name="interfaz" placeholder="Tipo de interfaz" list="lista2">
+                                            <datalist id="lista2">
+                                                <option value="USB"></option>
+                                                <option value="PS-2"></option>
+                                            </datalist>
                                         </div>
                                         <div class="form-group">
                                             <label for="inventario">Inventario:</label>
